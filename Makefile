@@ -1,4 +1,4 @@
-FLASK := flask run --host=0.0.0.0
+FLASK := python3 -m flask run --host=0.0.0.0
 
 run:
 	$(FLASK) --port=5000 --no-debug
