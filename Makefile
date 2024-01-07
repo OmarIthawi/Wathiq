@@ -1,5 +1,10 @@
+FLASK := flask run --host=0.0.0.0
+
 run:
-	python3 app.py
+	$(FLASK) --port=5000 --no-debug
+
+dev:
+	$(FLASK) --port=5010 --debug
 
 
 AUTOSTART_FILE := $(HOME)/.config/autostart/wathiq.desktop
