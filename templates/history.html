@@ -1,0 +1,7 @@
+<h1>Screenshots</h1>
+{% for screenshot in screenshots %}
+    <figure>
+        <img src="/static/screenshots/{{ screenshot }}" alt="{{ screenshot }}" style="max-width: 100%" />
+        <figcaption>{{ screenshot }}</figcaption>
+    </figure>
+{% endfor %}
