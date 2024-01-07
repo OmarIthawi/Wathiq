@@ -7,7 +7,11 @@ from datetime import datetime
 STATIC_DIR = Path(f'{os.environ["HOME"]}/.local/share/wathiq/static')
 SCREENSHOTS_DIR = STATIC_DIR / 'screenshots'
 
-app = Flask(__name__, static_folder=STATIC_DIR)
+app = Flask(
+    __name__,
+    static_folder=STATIC_DIR,
+    template_folder=Path(__file__).parent / 'templates',
+)
 
 
 def take_screenshot():

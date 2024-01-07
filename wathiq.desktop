@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Version=<VERSION>
+Name=Wathiq
+Comment=Wathiq Monitoring App
+Exec=python3 <WATHIQ_DIR>/app.py
+StartupNotify=false
+Terminal=false
+X-GNOME-Autostart-enabled=true
