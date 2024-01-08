@@ -20,7 +20,7 @@ remove_startup:
 
 install_crontab:
 	crontab -l | grep -v wathiq | crontab -
-	crontab -l | { cat; echo "*/5 * * * * $(PWD)/wathiq-cron"; } | crontab -
+	crontab -l | { cat; echo "*/5 * * * * $(PWD)/bin/wathiq-cron"; } | crontab -
 	crontab -l
 
 remove_crontab:
