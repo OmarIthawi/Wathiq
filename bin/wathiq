@@ -1,0 +1,4 @@
+#!/bin/sh
+BIN_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+cd "$BIN_DIR/.."
+make run

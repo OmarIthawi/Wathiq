@@ -14,3 +14,15 @@ install_startup:
 	sed -i "s|<WATHIQ_DIR>|$(PWD)|g" "$(AUTOSTART_FILE)"
 	sed -i "s|<VERSION>|$(GIT_VERSION)|g" "$(AUTOSTART_FILE)"
 	chmod 664 "$(AUTOSTART_FILE)"
+
+remove_startup:
+	rm -f "$(AUTOSTART_FILE)"
+
+install_crontab:
+	crontab -l | grep -v wathiq | crontab -
+	crontab -l | { cat; echo "*/5 * * * * $(PWD)/wathiq-cron"; } | crontab -
+	crontab -l
+
+remove_crontab:
+	crontab -l | grep -v wathiq | crontab -
+	crontab -l
